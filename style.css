@@ -109,7 +109,7 @@ body{
     height: 50px;
     border-radius: 50%;
     display: flex;
-    
+    background: none;
     align-items: center;
     justify-content: center;
     border: none;
@@ -182,7 +182,7 @@ body{
   margin: 64px 0;
   transition: .4s;
   grid-template-columns: repeat(4,1fr);
-  grid-template-rows: 500px;
+  grid-template-rows: minmax(500px, 1fr);
 }
 .home .content{
   display: flex;
@@ -221,11 +221,9 @@ body{
 
   width: 83%;
   font-weight: bold;
-  text-indent: 15px;
   font-size: 32px;
 }
 .home .content p{
-  text-align: justify;
   font-family: sans-serif;
   line-height:30px;
   width: 80%;
