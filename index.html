@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctors</title>
+  <!--CSS-->
+  <link rel="stylesheet" href="style.css">
+  <!--ICON-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
+</head>
+<body>
+  <aside class="navbar">
+    <button class="theme"><i class="far fa-sun"></i></button>
+    <nav class="nav-aside">
+      <ul class="menu-aside">
+        <li>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li><a href="#"><i class="fas fa-phone-alt"></i></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <header class="header">
+    <a class="logo"href="#">Ta de brigadeiro</a>
+
+    <nav>
+      <button class="btn-mobile">
+        <span></span>
+      </button>
+      <ul class="menu" >
+        <li>Home</li>
+        <li>Buy</li>
+        <li>Cakes</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="cakes">
+      <div class="box">
+        <div class="imgbx">
+          <img src="image/amirali-mirhashemian-EfkMkUXs0fU-unsplash.jpg" alt="">
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgbx">
+          <img src="image/american-heritage-chocolate-vdx5hPQhXFk-unsplash.jpg" alt="">
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgbx">
+          <img src="image/david-holifield-g5bgYkKa8y0-unsplash.jpg" alt="">
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgbx">
+          <img src="image/david-holifield-kPxsqUGneXQ-unsplash.jpg" alt="">
+        </div>
+      </div>
+      
+    </div>
+    </div>
+    <div class="home">
+      <div class="content">
+        <h2>For birthday celebration</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident unde mollitia, ea minus sunt dolorum atque, dignissimos porro iure consectetur, ab fugiat sed ut doloribus asperiores aliquid obcaecati eum cum!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quas explicabo ex assumenda, corporis molestias facilis temporibus nam corrupti non alias, est facere odio? Vero incidunt nostrum ullam veniam. Natus.
+        </p>
+        <div class="choice">
+          <a href="#">CHOICE <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
+      <div class="phot">
+        <img src="image/stephen-wheeler-LRIQuZyxKRM-unsplash.jpg" alt="">
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy;Copyright - Lincon</p>
+  </footer>
+  <script>
+    let containers = document.querySelectorAll(".imgBox");
+    containers.forEach(e=>{
+      e.addEventListener("click", function(){
+        this.classList.toggle("active")
+      })
+    })
+
+    let btnMobile = document.querySelector(".btn-mobile");
+    btnMobile.onclick = ()=>{
+      let menuMobile = document.querySelector(".header nav");
+      menuMobile.classList.toggle("active")
+    }
+  </script>
+</body>
+</html>
