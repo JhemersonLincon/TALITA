@@ -7,6 +7,7 @@
 
 body{
   padding:0 100px;
+  background-color:rgb(250, 229, 255);
 
 }
 @media (max-width:900px){
@@ -17,9 +18,10 @@ body{
 .navbar{
   display: flex;
   align-items: center;
-  background:#7B4E2F;
+  background:rgb(148, 121, 152);
   justify-content: space-between;
   height: 70px;
+  border-radius: 3px;
 }
 .navbar .theme i{
   font-size: 24px;
@@ -42,7 +44,27 @@ body{
   font-size: 24px;
 }
 .navbar .menu-aside li a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
+
+}
+.navbar .menu-aside li a p {
+  margin-right: 5px;
+}
+.navbar .menu-aside li a i{
+  color: white;
+  animation: batendo .5s infinite alternate linear;
+}
+@keyframes batendo {
+  0%{
+    transform: scale(.7);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 .header{
   color: hsl(24, 47%, 19%);
@@ -50,17 +72,27 @@ body{
   align-items: center;
   justify-content: space-between;
   height: 70px;
+  border-radius: 3px;
 }
 .header .logo{
-  font-size: 32px;
-  color: #262626;
-  font-family: monospace;
+  font-size: 1.3rem;
+  color: #120218;
+  letter-spacing: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
   text-decoration: none;
 }
 .header .menu{
   display: flex;
   gap: 32px;
   list-style: none;
+}
+.header .menu nav{
+  height: 100%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
 }
 .header .menu li{
   letter-spacing: 4px;
@@ -147,13 +179,14 @@ body{
 .cakes{
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  grid-template-rows: minmax(600px, 1fr);
+  grid-template-rows: minmax(500px, 1fr);
   gap: 5px;
 }
 .box{
   position: relative;
   width: 100%;
   height: 100%;
+  border-radius: 3px;
   overflow: hidden;
 }
 .box .imgbx{
@@ -166,6 +199,7 @@ body{
   width: 100%;
   position: absolute;
   object-fit: cover;
+  
   height: 100%;
 }
 .box .imgbx:hover{
@@ -183,6 +217,7 @@ body{
   transition: .4s;
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: minmax(500px, 1fr);
+  border-radius: 3px;
 }
 .home .content{
   display: flex;
@@ -196,8 +231,7 @@ body{
 @media (max-width:1100px){
   .home{
     position: relative;
-    grid-template-columns: 1fr;
-    background-image: url("image/stephen-wheeler-LRIQuZyxKRM-unsplash.jpg");
+    display:block;
     background-position: center;
     background-size: cover;
   }
@@ -205,12 +239,8 @@ body{
     color: white;
     background: rgba(0,0,0,0.5);
   }
-  .home .phot{
-    display: none;
-    grid-column: span 1/2;
-    top: 0;
-    right:0;
-    position: absolute;
+  .home .items{
+    display: flex;
     z-index: 1001;
   }
 }
@@ -233,7 +263,7 @@ body{
   width: 80%;
 }
 .home .content .choice a{
-  background: #7B4E2F;
+  background: rgb(148, 121, 152);
   text-decoration: none;
   letter-spacing: 3px;
   border-radius: 5px;
@@ -247,12 +277,25 @@ body{
 .home .content .choice a i{
   margin-left: 8px;
 }
-
-.home .phot {
+.home .items-wrapper{
+  margin-top: 2rem;
   grid-column: 3/5;
+  overflow:hidden;
+}
+.home .items {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.home .items .item {
+  flex:none;
+  width: 100%;
+  scroll-snap-align: start;
   overflow: hidden;
 }
-.home .phot img{
+
+.home .items img{
   transition: .3s;
   width: 100%;
   height: 100%;
@@ -260,12 +303,9 @@ body{
   align-self: center;
   object-fit: cover;
 }
-.home .phot img:hover{
-  transform: scale(1.2);
-}
 
 .footer{
-  background: #7B4E2F;
+  background: rgb(148, 121, 152);
   padding: 12px;
   display: flex;
   justify-content: center;
