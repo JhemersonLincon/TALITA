@@ -289,7 +289,7 @@ body::-webkit-scrollbar-thumb{
   font-size: 0.7rem;
 }
 .home .content.active p{
-  -webkit-line-clamp: 60 !important;
+  -webkit-line-clamp: 100 !important;
 }
 .home .content .choice{
   margin: 32px 0;
