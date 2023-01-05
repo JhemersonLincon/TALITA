@@ -100,19 +100,26 @@ body::-webkit-scrollbar-thumb{
 .header .menu{
   display: flex;
   gap: 32px;
+
   list-style: none;
 }
-.header .menu nav{
+.header nav{
   height: 100%;
   display: flex;
   justify-content:center;
   align-items:center;
 }
-.header .menu li{
+.header  li a{
   letter-spacing: 4px;
   font-size: 14px;
+  color: #120218;
+  text-decoration: none;
   font-weight: 500;
+  transition: .3s;
   text-transform: uppercase;
+}
+.header li a:hover{
+  color: #ebe7e7;
 }
 @media(max-width:900px){
   .header .menu{
