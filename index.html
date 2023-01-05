@@ -23,7 +23,7 @@
     </nav>
   </aside>
   <header class="header">
-    <a class="logo"href="#">"Odiar para não amar"</a>
+    <button class="logo">"Odiar para não amar"</button>
     <nav>
       <button class="btn-mobile">
         <span></span>
@@ -39,12 +39,12 @@
     <div class="cakes">
       <div class="box">
         <div class="imgbx">
-          <img src="image/talitavityisac.jpg" alt="">
+          <img src="image/isactalita.jpg" alt="">
         </div>
       </div>
       <div class="box">
         <div class="imgbx">
-          <img src="image/talitaisacdudu.jpg" alt="">
+          <img src="image/amigos.jpg" alt="">
         </div>
       </div>
       <div class="box">
@@ -74,6 +74,10 @@
         <div class="items">
           <img class="item" src="image/euetalita.jpg" alt="">
           <img class="item" src="image/talitaisacdudu.jpg" alt="">
+          <img class="item" src="image/ia.jpg" alt="">
+          <img class="item" src="image/shopping.jpg" alt="">
+          <img class="item" src="image/smmim.jpg" alt="">
+          <img class="item" src="image/tal.jpg" alt="">
         </div>
       </div>
 
@@ -82,6 +86,15 @@
   <footer class="footer">
     <p>&copy;Copyright - Lincon</p>
   </footer>
+  <main class="amar">
+      <button class="fecharModal">X</button>
+      <div class="container">
+        <h3>Parabens Palhaça ❣❤</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
+      </div>
+  </main>
   <script>
     let containers = document.querySelectorAll(".imgBox");
     containers.forEach(e=>{
@@ -91,10 +104,28 @@
     })
 
     let btnMobile = document.querySelector(".btn-mobile");
+    let btnModal = document.querySelector(".logo");
+    let fecharModal = document.querySelector(".fecharModal");
+
     btnMobile.onclick = ()=>{
       let menuMobile = document.querySelector(".header nav");
       menuMobile.classList.toggle("active")
     }
+    btnModal.onclick = ()=>{
+      let menuModal = document.querySelector(".amar");
+      menuModal.classList.toggle("active");
+    }
+
+    fecharModal.onclick = ()=>{
+      let menuModal = document.querySelector(".amar");
+      menuModal.classList.toggle("active");
+    }
+    document.querySelector(".items").addEventListener("wheel", event => {
+      if(event.deltaY > 0) {
+        event.target.scrollBy(300, 0);
+      }
+      else event.target.scrollBy(-300, 0);
+    })
   </script>
 </body>
 </html>
