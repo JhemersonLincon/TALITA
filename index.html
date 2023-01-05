@@ -62,12 +62,18 @@
     </div>
     <div class="home">
       <div class="content">
-        <h2>For birthday celebration</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident unde mollitia, ea minus sunt dolorum atque, dignissimos porro iure consectetur, ab fugiat sed ut doloribus asperiores aliquid obcaecati eum cum!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quas explicabo ex assumenda, corporis molestias facilis temporibus nam corrupti non alias, est facere odio? Vero incidunt nostrum ullam veniam. Natus.
+        <h2>Feliz Aniversario Talita!!!</h2>
+        <p> 
+          Oiii Talita!!! <br> chegou o seu grande dia, o seu aniversário. <br><br>Hoje estou aqui para te parabenizar por mais um ano de vida, eu agradeço muito por ter conhecido você vivemos muito momentos ao longo de 2022, a qual eu adorei muito, como no dia da primeira calourada do nosso curso, você estava muito doidinha aquele dia hahaha, tava jogando pedras no seus amiguinhos né KKKK, além disso vc estava muito bêbada mas continuava sendo uma pessoa altamente agradável apesar de uns deslizes né, como já foi dito agora a pouco ksksks. Teve também os momentos nas aulas de Eugênio a qual todos nós estávamos ferrados na matéria dele kkkkk, tivemos um final esperado na matéria, a temida reprovação veio, mas conseguimos superar isso no semestre seguinte.
+          <br/><br/>Além disso o segundo semestre foi o momento dos grandes percalços como o dia que tivemos que fazer grandes maratonas de estudos para conseguir entregar as atividades GAAL foi um caos nas nossas vidas kkkk, alguns dos nossos amigos conseguiram passar outros não mas isso não foi motivos para desanimar a gente. 
+          <br/><br/>Você deve tá se perguntando sobre Cálculo ? Não tem oque comentar kkkkkkk nao fizemos nada nela , apenas desistimos da matéria hahahahaha. Probabilidade foi outra disciplina que fez um terror com a gente mas no final deu certo pra alguns hahahahaha. 
+          Não podemos esquecer de TGS que nos matou para podermos fazer as atividades do Ead, as outras matérias foi só vitória conseguimos vencer ela com tranquilidade principalmente AEDS com Baleeiro.
+           Os roles nossos foram ótimos, o cineminha foi gostosinho aff, o rodízio na Quero Pizza foi bommm demais exceto no Berrys que custou alguns rins, mais em fim, foi muitas coisas que vivemos, é difícil resumir em um textinho kkkkkkk, mais te desejo tudo de bom, que seu aniversário seja incrível, e que esse ano seja um máximo para a gente.<br><br> PARABÉNS !!!
+
+<br> de Isac e Lincon.
         </p>
         <div class="choice">
-          <a href="#">CHOICE <i class="fas fa-chevron-right"></i></a>
+          <button href="#">ME CLICA '-' <i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
       <div class="items-wrapper">
@@ -89,10 +95,27 @@
   <main class="amar">
       <button class="fecharModal">X</button>
       <div class="container">
-        <h3>Parabens Palhaça ❣❤</h3>
+        
+        <div class="content">
+        <h2>Parabens Talita ❣❤️</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            Ave Maria, Isac já fez um texto por nós 2 kkkk <br>
+            Nem sei oq dizer 😳 <br><br>
+            Bom acho que eu posso explicar o porquê isso se chama "Odiar para não amar"<br><br>
+            Não, eu não te odeio, até que eu não acharia ruim na verdade, afinal como meu personagem diz "Odiar alguém é mais fácil do que gostar", mas eu acabei gostando muito de você, mais do que  pensei que gostaria.🤔<br><br>
+            Então eu fiz isso para caso  você  se esqueça que  realmente foi uma das partes mais importantes de 2022 para mim e uma das melhores pessoas que conheci, fico muito feliz por ter caído de paraquedas no nosso grupo ( só conheci gente louca kkkk ) e espero que continue sendo parte da minha vida por muito tempo.<br><br>
+            Agora mesmo eu tô me contorcendo enquanto escrevo isso, eu tô com muita saudade de você, de cada detalhe em você 🥰!! <br><br>
+            Feliz Aniversário Pessoinha incrível chamada Talita!! ❤️ <br><br>
+            Eu sei que você se encontrará na sua própria confusão e brilhará tão intensamente quanto o sol, se tornará o'que quiser ser e me levará para passear de jatinho. 🙏🙏<br><br>
+            Quero te morder. 🥺<br><br>
+            - LINCON -
         </p>
+      </div>
+      <div class="item-wrapper">
+        <div class="item">
+          <img src="image/euetalita.jpg"/>
+        </div>
+      </div>
       </div>
   </main>
   <script>
@@ -106,6 +129,7 @@
     let btnMobile = document.querySelector(".btn-mobile");
     let btnModal = document.querySelector(".logo");
     let fecharModal = document.querySelector(".fecharModal");
+    let textoTotal = document.querySelector(".content");
 
     btnMobile.onclick = ()=>{
       let menuMobile = document.querySelector(".header nav");
@@ -119,6 +143,9 @@
     fecharModal.onclick = ()=>{
       let menuModal = document.querySelector(".amar");
       menuModal.classList.toggle("active");
+    }
+    textoTotal.onclick = ()=>{
+      textoTotal.classList.toggle("active");
     }
     document.querySelector(".items").addEventListener("wheel", event => {
       if(event.deltaY > 0) {
