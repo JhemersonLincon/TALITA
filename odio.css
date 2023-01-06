@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb{
   background:rgb(148, 121, 152);
   justify-content: space-between;
   height: 70px;
-  z-index:1001;
+
   border-radius: 3px;
 }
 .navbar .theme i{
