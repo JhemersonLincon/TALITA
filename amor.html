@@ -67,6 +67,18 @@
 <footer class="footer">
   <p>&copy;Copyright - Lincon</p>
 </footer>
+<main class="amar">
+  <button class="fecharModal">X</button>
+  <div class="container">
+    <div class="easterEgg">
+
+        <label>Olá, Digite a senha Por favor!!</label>
+        <input placeholder="Senha" class="senha" type="password">
+        <input _blank type="submit" class="btn" value="Submit" onclick="validation()">
+
+    </div>
+    </div>
+  </main>
 <script>
   let containers = document.querySelectorAll(".imgBox");
   containers.forEach(e=>{
@@ -96,7 +108,23 @@
   textoTotal.onclick = ()=>{
     textoTotal.classList.toggle("active");
   }
+  function validation(){
+    let pass = document.querySelector(".senha");
 
+    if(pass.value  === "linhoSac"){
+      let easterEgg = document.querySelector(".easterEgg");
+      console.log("okay");
+      easterEgg.style.display = "none";
+      const paragrafo = document.createElement("p");
+
+      let texto = document.createTextNode("Vamos tomar uma caipirinha juntos de novo??!!")
+      let container= document.querySelector(".container");
+      paragrafo.appendChild(texto);
+      container.appendChild(paragrafo);
+
+
+    }
+  }
 </script>
 </body>
 </html>
