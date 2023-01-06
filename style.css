@@ -14,7 +14,7 @@ body::-webkit-scrollbar{
   width:12px;
 }
 body::-webkit-scrollbar-track{
-  background:white;
+  background:rgb(250, 229, 255);
 }
 
 body::-webkit-scrollbar-thumb{
@@ -37,7 +37,7 @@ body::-webkit-scrollbar-thumb{
 }
 .navbar .theme i{
   font-size: 24px;
-  color: white;
+  color: rgb(250, 229, 255);
 }
 .navbar .theme{
   background: none;
@@ -60,14 +60,44 @@ body::-webkit-scrollbar-thumb{
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: rgb(250, 229, 255);
 
+}
+.navbar .theme i::after{
+  content:"vocÊ é parte da engrenagem do nosso grupo, sem vocÊ as peças não funciona direito!!😳🥰❤️";
+  z-index: 1000;
+  display:flex;
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  align-items: center;
+  font-size:12px;
+  padding-top: 14px;
+  justify-content: center;
+  color:#120218;
+  letter-spacing: 3px;
+  display: none;
+  font-family: sans-serif;
+  height: 0;
+  max-width: 400px;
+  text-transform: uppercase;
+  clip-path: polygon(5% 24%, 12% 0, 18% 23%, 100% 22%, 100% 100%, 0 100%, 0 24%);
+  background-color: rgb(252, 240, 255);
+}
+@media (max-width:900px){
+  .navbar .theme i::after{
+    left: 0px;
+  }
+}
+.navbar .theme:hover i::after{
+  display: flex;
+  min-height:100px;
 }
 .navbar .menu-aside li a p {
   margin-right: 5px;
 }
 .navbar .menu-aside li a i{
-  color: white;
+  color: rgb(252, 240, 255);
   animation: batendo .5s infinite alternate linear;
 }
 @keyframes batendo {
@@ -79,7 +109,6 @@ body::-webkit-scrollbar-thumb{
   }
 }
 .header{
-  color: hsl(24, 47%, 19%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -87,7 +116,7 @@ body::-webkit-scrollbar-thumb{
   border-radius: 3px;
 }
 .header .logo{
-  font-size: 1.3rem;
+  cursor: pointer;
   color: #120218;
   letter-spacing: 4px;
   background: none;
@@ -119,7 +148,8 @@ body::-webkit-scrollbar-thumb{
   text-transform: uppercase;
 }
 .header li a:hover{
-  color: #ebe7e7;
+  color: rgb(252, 240, 255);
+  text-shadow: 0 0 4px #120218;
 }
 @media(max-width:900px){
   .header .menu{
@@ -148,11 +178,11 @@ body::-webkit-scrollbar-thumb{
     transition: .3s;
     padding: 16px;
     margin-top: 16px;
-    border-bottom: 2px solid gray ;
+    border-bottom: 2px solid rgb(252, 240, 255) ;
   }
   .header .menu li:hover{
     color: white;
-    background-color: gray;
+    background-color: rgb(252, 240, 255);
   }
 
   .header nav .btn-mobile{
@@ -169,11 +199,11 @@ body::-webkit-scrollbar-thumb{
   }
   .header nav .btn-mobile:hover{
     
-    background: grey;
+    background: #947998;
   }
   .header nav .btn-mobile span{
     width: 30px;
-    background-color: #180e08;
+    background-color: #120218;
     height: 4px;
     display: block;
     flex-direction: column;
@@ -216,11 +246,10 @@ body::-webkit-scrollbar-thumb{
   height: 100%;
   transition: .4s;
 }
-.box .imgbx img{
+.box .imgbx img, .box .imgbx source{
   width: 100%;
   position: absolute;
   object-fit: cover;
-  
   height: 100%;
 }
 .box .imgbx:hover{
@@ -353,7 +382,7 @@ body::-webkit-scrollbar-thumb{
   pointer-events:none;
 }
 
-.home .items img{
+.home .items img, picture{
   transition: .3s;
   width: 100%;
   height: 100%;
@@ -463,7 +492,7 @@ body::-webkit-scrollbar-thumb{
 
 @media (max-width:1100px){
   .home .items {
-    max-height:450px;
+    height:450px;
   }
   .amar {
     display:block;

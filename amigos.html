@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amor ❣</title>
-  <!--CSS-->
-  <link rel="stylesheet" href="amor.css">
-  <!--ICON-->
+  <title>Amigos</title>
+  <link rel="stylesheet" href="amigos.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
 </head>
 <body>
   <aside class="navbar">
@@ -23,15 +22,15 @@
     </nav>
   </aside>
   <header class="header">
-    <button class="logo">Amor próprio acima de tudo ❤️</button>
+    <button class="logo">"TALVEZ AMIGOS SEJA A MELHOR COISA DO MUNDO"</button>
     <nav>
       <button class="btn-mobile">
         <span></span>
       </button>
       <ul class="menu" >
-        <li><a href="#">AMOR</a></li>
+        <li><a href="amor.html">AMOR</a></li>
         <li><a href="odio.html">ÓDIO</a></li>
-        <li><a href="amigos.html">AMIGOS</a></li>
+        <li><a href="#">AMIGOS</a></li>
       </ul>
     </nav>
   </header>
@@ -39,34 +38,62 @@
   <div class="cakes">
     <div class="box">
       <div class="imgbx">
-        <img src="image/talita.jpg" alt="">
+        <img src="image/ficamos.jpg" alt="">
       </div>
     </div>
     <div class="box">
       <div class="imgbx">
-        <img src="image/g.jpg" alt="">
+        <img src="image/ia.jpg" alt="">
       </div>
     </div>
     <div class="box">
       <div class="imgbx">
-        <img src="image/talitauni.jpg" alt="">
+        <img src="image/IMG_20221027_163347896_HDR.jpg" alt="">
       </div>
     </div>
     <div class="box">
       <div class="imgbx">
-        <img src="image/talitaG.jpg" alt="">
+        <img src="image/amigos.jpg" alt="">
       </div>
     </div>
     <div class="box">
       <div class="imgbx">
-        <img src="image/divina.jpg" alt="">
+        <img src="image/lindovity.jpg" alt="">
+      </div>
+    </div>''
+    <div class="box">
+      <div class="imgbx">
+        <img src="image/todos.jpg" alt="">
       </div>
     </div>
+    <div class="box">
+      <div class="imgbx">
+        <img src="image/cin.jpg" alt="">
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgbx">
+        <img src="image/smmim.jpg" alt="">
+      </div>
+    </div>
+    
   </div>
 </div>
 <footer class="footer">
   <p>&copy;Copyright - Lincon</p>
 </footer>
+<main class="amar">
+  <button class="fecharModal">X</button>
+  <div class="container">
+    <div class="easterEgg">
+
+        <label>Olá, Digite a senha Por favor!!</label>
+        <input placeholder="Senha" class="senha" type="password">
+        <input _blank type="submit" class="btn" value="Submit" onclick="validation()">
+
+    </div>
+  </div>
+</body>  
 <script>
   let containers = document.querySelectorAll(".imgBox");
   containers.forEach(e=>{
@@ -97,6 +124,23 @@
     textoTotal.classList.toggle("active");
   }
 
+
+  function validation(){
+    let pass = document.querySelector(".senha");
+
+    if(pass.value  === "linhouse"){
+      let easterEgg = document.querySelector(".easterEgg");
+      console.log("okay");
+      easterEgg.style.display = "none";
+      const paragrafo = document.createElement("p");
+
+      let texto = document.createTextNode("Amigo por opção. Não minha😳!!")
+      let container= document.querySelector(".container");
+      paragrafo.appendChild(texto);
+      container.appendChild(paragrafo);
+
+
+    }
+  }
 </script>
-</body>
 </html>

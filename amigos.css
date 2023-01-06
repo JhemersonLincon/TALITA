@@ -28,24 +28,18 @@ body::-webkit-scrollbar-thumb{
   body{
     padding: 0 20px;
   }
-
-  .navbar .theme i::after {
-    left:0px;
-  }
 }
-
 .navbar{
   display: flex;
   align-items: center;
   background:rgb(148, 121, 152);
   justify-content: space-between;
   height: 70px;
-  z-index:1001;
   border-radius: 3px;
 }
 .navbar .theme i{
   font-size: 24px;
-  color: rgb(252, 240, 255);
+  color:rgb(252, 240, 255) ;
 }
 .navbar .theme{
   background: none;
@@ -68,11 +62,11 @@ body::-webkit-scrollbar-thumb{
   display: flex;
   align-items: center;
   justify-content: center;
-  color:rgb(252, 240, 255) ;
+  color: rgb(252, 240, 255);
 
 }
 .navbar .theme i::after{
-  content:"vocÊ é parte da engrenagem do nosso grupo, sem vocÊ as peças não funciona direito!!😳🥰❤️";
+  content:"vocês SÃO A parte da engrenagem do nosso grupo, QUE sem vocÊS O SISTEMA não funciona direito!!😳🥰❤️";
   z-index: 1000;
   display:flex;
   position: absolute;
@@ -97,10 +91,9 @@ body::-webkit-scrollbar-thumb{
   }
 }
 .navbar .theme:hover i::after{
-  display:flex;
+  display: flex;
   min-height:100px;
 }
-
 .navbar .menu-aside li a p {
   margin-right: 5px;
 }
@@ -131,6 +124,7 @@ body::-webkit-scrollbar-thumb{
   background: none;
   border: none;
   font-size: 14px;
+  cursor: pointer;
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
@@ -157,8 +151,7 @@ body::-webkit-scrollbar-thumb{
   text-transform: uppercase;
 }
 .header li a:hover{
-  color: rgb(252, 240, 255);
-  text-shadow: 0 0 4px #120218;
+  color:rgb(252, 240, 255) ;
 }
 @media(max-width:900px){
   .header .menu{
@@ -236,12 +229,14 @@ body::-webkit-scrollbar-thumb{
   }
 
 }
+
 .cakes{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows:repeat(2, minmax(200px, 1fr));
-  grid-template-areas: "menor maior maior  peq"
-                        "menor  peq2 maior2 maior2 " ;
+  grid-template-rows:repeat(3, minmax(150px, 1fr));
+  grid-template-areas: "menor maior2 maior  peq"
+                        "menor  min  maior  maior3" 
+                        "menor  min min2 maior3";
   gap: 5px;
 }
 
@@ -251,7 +246,7 @@ body::-webkit-scrollbar-thumb{
 .box:nth-child(1){
   grid-area: maior;
 }
-.box:nth-child(2){
+.box:nth-child(5){
   grid-area: peq;
 }
 .box:nth-child(3){
@@ -259,6 +254,15 @@ body::-webkit-scrollbar-thumb{
 }
 .box:nth-child(2){
   grid-area: maior2;
+}
+.box:nth-child(6){
+  grid-area: maior3;
+}
+.box:nth-child(7){
+  grid-area: min;
+}
+.box:nth-child(8){
+  grid-area: min2;
 }
 .box{
   position: relative;
@@ -284,18 +288,7 @@ body::-webkit-scrollbar-thumb{
 .box .imgbx:hover{
   transform: scale(1.2);
 }
-@media(max-width:900px){
-  .cakes{
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, minmax(200px,1fr) );
-    grid-template-areas: "menor"
-                        "maior" 
-                        "peq"
-                        "peq2"
-                        "maior2";
 
-  }
-}
 .content h1 {
   text-transform: uppercase;
   color: #120218;
@@ -318,4 +311,98 @@ body::-webkit-scrollbar-thumb{
   color: white;
   font-weight: bold;
   font-size: 14px;
+}
+
+
+.amar{
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index:1000;
+  display:flex;
+  height: 0vh;
+  letter-spacing: 4px;
+  overflow: scroll;
+  transition: .3s;
+  width: 100vw;
+  top: 0;
+  
+  line-height:20px;
+  left: 0;
+  font-size:12px;
+  background-color: rgba(250, 229, 255, 0.7);
+}
+.amar.active {
+  height: 100vh;
+  z-index:0;
+}
+.amar.active .fecharModal{
+  position:fixed;
+  top:0;
+  border:none;
+  box-shadow: 0px 0px 5px rgba(41, 8, 46, 0.3);
+  right:0;
+  margin: 0;
+  margin-top:10px;
+  margin-right:30px;
+  padding:20px;
+  cursor: pointer;
+  font-size:16px;
+  transition:.3s;
+  background: rgb(252, 239, 255);
+  border-radius:50%
+}
+.amar.active .fecharModal:hover{
+  background:rgb(148, 121, 152);
+  color: rgb(252, 239, 255);
+}
+.amar .container{
+  overflow:hidden;
+  margin:0px 100px;
+  border-radius: 3px;
+  max-width:71rem;
+  box-shadow: 0px 0px 5px rgba(41, 8, 46, 0.3);
+  background-color: rgb(252, 239, 255);
+  padding: 12px;
+}
+
+.amar .container .easterEgg {
+  display: flex;
+  min-height: 200px;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #947998;
+}
+.amar .container .easterEgg label{
+  background-color: rgb(252, 239, 255);
+  margin: 12px;
+}
+.amar .container .easterEgg  input{
+  border: none;
+  margin: 12px;
+  outline:none;
+  min-height: 30px;
+  background-color: rgb(252, 239, 255);
+  color:#120218 ;
+}
+.amar .container .easterEgg  .btn{
+  cursor: pointer;
+}
+
+
+@media(max-width:900px){
+  .cakes{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, minmax(200px,1fr) );
+    grid-template-areas: "menor"
+                        "maior" 
+                        "peq"
+                        "peq2"
+                        "maior2";
+
+  }
+
+  .amar .container{
+    margin: 0 20px;
+  }
 }
