@@ -325,7 +325,6 @@ body::-webkit-scrollbar-thumb{
   justify-content: center;
   align-items: center;
   z-index:1000;
-  padding:0 100px;
   display:flex;
   height: 0vh;
   letter-spacing: 4px;

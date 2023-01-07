@@ -324,9 +324,7 @@ body::-webkit-scrollbar-thumb{
   position: fixed;
   justify-content: center;
   align-items: center;
-  z-index:1000;
   display:flex;
-  padding:0 100px;
   height: 0vh;
   letter-spacing: 4px;
   overflow: scroll;
@@ -341,7 +339,7 @@ body::-webkit-scrollbar-thumb{
 }
 .amar.active {
   height: 100vh;
-  z-index:0;
+
 }
 .amar.active .fecharModal{
   position:fixed;
